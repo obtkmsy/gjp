@@ -1,0 +1,59 @@
+{%- comment -%}
+    if we apply a special style to cents,
+    we will wrap them in a sup (superscript) element.
+
+    Accepts:
+     - price     {Number}
+     - css_class {String}
+{%- endcomment -%}
+
+{%- liquid
+    assign price = price | default: '1999'
+    assign formatted_price = price | money
+
+    if settings.superscript_decimals
+        assign moneyFormat = shop.money_format | replace: "{{","" | replace: "}}","" | strip_html
+
+        unless moneyFormat contains 'money' or moneyFormat contains 'amount_no_decimals' or moneyFormat contains '.'
+            if moneyFormat contains 'amount_with_comma_separator'
+                assign formatted_price = formatted_price | replace: ',', '<span class="visually-hidden">,</span><sup>'
+            elsif moneyFormat contains 'amount'
+                assign formatted_price = formatted_price | replace: '.', '<span class="visually-hidden">.</span><sup>'
+            endif
+
+            assign tail = formatted_price | split: '</span><sup>' | last
+            assign head = formatted_price | split: '</span><sup>' | first
+            assign head = head | append: '</span><sup>'
+            assign tail_last_index = tail | size | minus: 1
+            assign is_sup_closed = false
+
+            for i in (0..tail_last_index)
+                assign c = tail | slice: i, 1
+                unless '0123456789' contains c or is_sup_closed
+                    assign head = head | append: '</sup>'
+                    assign is_sup_closed = true
+                endunless
+
+                assign head = head | append: c
+            endfor
+
+            assign formatted_price = head
+        endunless
+    endif
+
+    if variants
+        assign formatted_price = 'products.product.price.from_price_html' | t: price: formatted_price
+    endif
+
+    assign price_without_currency = price | money_without_currency
+    assign currency = price | money | strip_html | replace: price_without_currency, ''
+-%}
+<span class="{{ css_class }}" data-amount="{{ price_without_currency }}" data-currency="{{ currency }}">
+    {{
+        formatted_price
+        | replace_first: currency, '<span class="currency-sign">###</span>'
+        | replace: ' </span>', '&nbsp;</span>'
+        | replace_first: 'currency-sign"> ', 'currency-sign">&nbsp;'
+        | replace_first: '###', currency
+    }}
+</span>

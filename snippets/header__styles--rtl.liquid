@@ -1,0 +1,44 @@
+{% comment %}
+    Render styles for header section (RTL).
+
+    Accepst:
+     -  is_overlap_header (Boolean)
+{% endcomment %}
+
+{% style %}
+    .menu-drawer {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+    }{% if is_overlap_header %}
+
+    .header__search .search__button {
+        margin: 0 calc(-2 * (.75rem - 1px) - 1.5rem) 0 0;
+    }
+
+    .header__search .search__input {
+        padding-left: 2.5rem;
+        padding-right: .75rem;
+    }{% endif %}
+
+    .language-icon__wrapper {
+        margin-left: .25rem;
+        margin-right: 0;
+    }
+
+    @media (min-width: 990px), print {
+        .list-menu--inline {
+            margin: 0 0 0 1rem;
+        }
+
+        summary.header__menu-item > svg {
+            margin-right: 0;
+            margin-left: .5rem;
+        }
+
+        .header .icon-caret {
+            margin-right: 0;
+            margin-left: -.5rem;
+        }
+    }
+{% endstyle %}

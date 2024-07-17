@@ -1,0 +1,311 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "border_top": true,
+        "border_bottom": false
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_before": "",
+            "text_after": "",
+            "show_rating_judgeme": true,
+            "show_sku": true,
+            "show_price": true,
+            "show_badges": true
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "settings": {
+            "show_controls": false,
+            "show_badges": false,
+            "thumbnail_size": 108,
+            "is_thumbnail_mobile_bullet": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_badges": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_collapsed": true,
+            "initial_lines": 3
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "mark_unavailable_variants": true,
+            "show_swatch_colors": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_stock_status": true,
+            "stock_left_threshold": 9
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "gift_card_show_recipient_form": false
+          }
+        },
+        "icons_bar": {
+          "type": "icons_bar",
+          "settings": {
+            "icons_width": 40,
+            "icon_1": "relax-shipping",
+            "text_1": "<p>Free shipping anywhere<\/p>",
+            "icon_2": "relax-returns",
+            "text_2": "<p>30 day free returns<\/p>"
+          }
+        },
+        "collapsible_customer_service": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Customer Service",
+            "content": "<p>Post your customer service details here.<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_return_policy": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return Policy",
+            "content": "<p>Post your policy conditions details here.<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "show_facebook": true,
+            "show_twitter": true,
+            "show_pinterest": true
+          }
+        },
+        "pickup": {
+          "type": "pickup",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "gallery",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "icons_bar",
+        "collapsible_customer_service",
+        "collapsible_return_policy",
+        "share",
+        "pickup"
+      ],
+      "settings": {
+        "enable_sticky_gallery": false,
+        "enable_sticky_info": true,
+        "enable_quick_add": false
+      }
+    },
+    "fbt": {
+      "type": "product-bought-together",
+      "disabled": true,
+      "settings": {
+        "border_bottom": true,
+        "heading": "Frequently Bought Together",
+        "source": [
+
+        ],
+        "is_random": true,
+        "products_per_page": 4,
+        "badge_size": "sm",
+        "image_ratio": "settings|product_card_image_ratio"
+      }
+    },
+    "product-tabs": {
+      "type": "product-tabs",
+      "blocks": {
+        "reviews": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "heading": "Reviews",
+            "app": "judgeme",
+            "enable_theme_appearance": true
+          }
+        },
+        "faq": {
+          "type": "faq",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "default_faqs": "What level of performance can I expect from 4K Color Drive?:This tv comes equipped with a 4k color drive, which allows the tv to accurately reproduce a wider spectrum of colors. you’ll experience an exceptionally vibrant, pristine image that makes each scene more lifelike.",
+            "link_to_faq_page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "heading": "Description"
+          }
+        },
+        "similar": {
+          "type": "similar",
+          "disabled": true,
+          "settings": {
+            "heading": "Similar Products",
+            "source": [
+
+            ],
+            "is_random": true,
+            "products_per_page": 4,
+            "badge_size": "sm",
+            "image_ratio": "settings|product_card_image_ratio",
+            "show_to_cart_button": false
+          }
+        }
+      },
+      "block_order": [
+        "reviews",
+        "faq",
+        "description",
+        "similar"
+      ],
+      "disabled": true,
+      "settings": {
+        "tabs_layout": "collapsed"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "title": "Related products",
+        "product": "{{ product }}",
+        "intent": "related",
+        "products_to_show": 8,
+        "products_per_row": 4,
+        "products_background_color": "#f3f6f9",
+        "products_appearance": "slider",
+        "show_slider_buttons": true,
+        "badge_size": "sm",
+        "image_ratio": "settings|product_card_image_ratio",
+        "show_to_cart_button": true
+      }
+    },
+    "recent_posts": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "Recent posts",
+        "blog": "news",
+        "post_limit": 3,
+        "show_image": true,
+        "tags_limit": 3,
+        "excerpt_limit": 16,
+        "show_link": true,
+        "show_comments": false
+      }
+    },
+    "icons_bar": {
+      "type": "icons-bar",
+      "blocks": {
+        "icon-bar-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "relax-shipping",
+            "text": "<p>Title<\/p><p>Description<\/p>"
+          }
+        },
+        "icon-bar-2": {
+          "type": "icon",
+          "settings": {
+            "icon": "relax-shipping",
+            "text": "<p>Title<\/p><p>Description<\/p>"
+          }
+        },
+        "icon-bar-3": {
+          "type": "icon",
+          "settings": {
+            "icon": "relax-shipping",
+            "text": "<p>Title<\/p><p>Description<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-bar-1",
+        "icon-bar-2",
+        "icon-bar-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "visibility": "all",
+        "icons_width": 48,
+        "border_top": false,
+        "border_bottom": false,
+        "shadow": false,
+        "separator": false
+      }
+    },
+    "rich_text_ehf8Jt": {
+      "type": "rich-text",
+      "blocks": {
+        "text_4mGwEp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>商品情報<\/p>"
+          }
+        },
+        "button_cqbDhq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "cover_color": "#F66560"
+          }
+        }
+      },
+      "block_order": [
+        "text_4mGwEp",
+        "button_cqbDhq"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "decorate": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "fbt",
+    "product-tabs",
+    "product-recommendations",
+    "recent_posts",
+    "icons_bar",
+    "rich_text_ehf8Jt"
+  ]
+}

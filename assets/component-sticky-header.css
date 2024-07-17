@@ -1,0 +1,32 @@
+.section-header-transition {
+    transition-property: top;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-animation {
+    position: sticky;
+    top: -100%;
+    z-index: 50;
+}
+
+.section-header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 51;
+}
+
+.section-header-sticky .header--overlapped .header__heading-logo_2 {
+        display: none;
+    }
+
+.section-header-sticky .header--overlapped span.h3,
+    .section-header-sticky .header--overlapped img.header__heading-logo {
+        display: block;
+        -webkit-mask-image: none;
+                mask-image: none;
+    }
+
+.section-header-sticky .header-wrapper {
+        background: var(--header--background-color);
+    }

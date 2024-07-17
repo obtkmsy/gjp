@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "block-1": {
+          "type": "contact_us",
+          "settings": {
+          }
+        },
+        "block-2": {
+          "type": "location",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2"
+      ],
+      "settings": {
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "border_bottom": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "form"
+  ]
+}

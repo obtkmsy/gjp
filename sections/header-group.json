@@ -1,0 +1,46 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header_top": {
+      "type": "header-top",
+      "settings": {
+        "full_width": false,
+        "color_text": "#7a8fa3",
+        "color_background": "linear-gradient(180deg, rgba(247,249,251, 1), rgba(247,249,251, 1) 100%)",
+        "show_email": true,
+        "show_phone": false,
+        "message": "<p><strong>Free shipping<\/strong> on all orders over $50 • Hassle <strong>Free 90-day Returns<\/strong><\/p>",
+        "add_border_bottom": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "enable_sticky_header": true,
+        "show_switcher_language": true,
+        "show_switcher_country": true,
+        "add_border_searchfield": true,
+        "full_width": false,
+        "add_border_bottom": false,
+        "logo": "shopify:\/\/shop_images\/logo_side_db4cc809-8042-4091-8849-40d9334f08f4.svg",
+        "logo_width": 140,
+        "menu": "main-menu",
+        "use_slideout_menu": false,
+        "second_level_menu_width": "small",
+        "megamenu_items": "",
+        "smallmenu_items": "",
+        "activate_top_level_menu": "on_hover",
+        "show_collection_image": false,
+        "collection_icon_width": 30,
+        "main_items_per_row": 4,
+        "second_dropdown_limit_qty_categories_link": "Shop All",
+        "second_dropdown_limit_qty_categories": 5
+      }
+    }
+  },
+  "order": [
+    "header_top",
+    "header"
+  ]
+}

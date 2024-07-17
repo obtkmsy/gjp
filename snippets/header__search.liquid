@@ -1,0 +1,79 @@
+{% comment %}
+    Render header search.
+
+    Accepts:
+     -  is_overlap_header (Boolean)
+{% endcomment %}
+
+{%- liquid
+    assign search_types = 'product'
+    assign possible_types = 'collection,article,page' | split: ','
+    for type in possible_types
+        assign key = 'predictive_search_show_' | append: type | append: 's'
+        if settings[key]
+            assign search_types = search_types | append: ',' | append: type
+        endif
+    endfor
+-%}
+
+<div class="header__search{% if section.settings.add_border_searchfield %} header__search--with-border{% endif %}">
+    {%- if settings.predictive_search_enabled -%}
+        <predictive-search
+            data-loading-text="{{ 'accessibility.loading' | t }}"
+            data-types="{{ search_types }}"
+            data-min-query-length="{{ settings.predictive_search_min_query_length }}"
+        >
+    {%- endif -%}
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+        <label class="search__label field__label visually-hidden" for="Search-In-Modal">
+            <svg aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-search" />
+            </svg>
+            <span>{{ 'general.search.search' | t }}</span>
+        </label>
+        <div class="field">
+            <input
+                class="search__input field__input"
+                id="Search-In-Modal"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                {%- if settings.predictive_search_enabled -%}
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-owns="predictive-search-results-list"
+                    aria-controls="predictive-search-results-list"
+                    aria-haspopup="listbox"
+                    aria-autocomplete="list"
+                    autocorrect="off"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                {%- endif -%}
+            >
+            <input name="type" type="hidden" value="product">
+            <input name="options[prefix]" type="hidden" value="last">
+            {%- if settings.predictive_search_enabled -%}
+                <div
+                    class="predictive-search predictive-search--search-template loader-when-empty"
+                    data-predictive-search
+                ></div>
+                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+            {%- endif -%}
+
+            <button
+                class="search__button field__button button"
+                aria-label="{{ 'general.search.search' | t }}"
+                onclick="let f = this.form; if (f && !f.q?.value) { f.q?.focus?.(); return false;}"
+            >
+                <svg aria-hidden="true" focusable="false" role="presentation">
+                    <use href="#icon-search" />
+                </svg>
+            </button>
+        </div>
+    </form>
+    {%- if settings.predictive_search_enabled -%}
+        </predictive-search>
+    {%- endif -%}
+</div>

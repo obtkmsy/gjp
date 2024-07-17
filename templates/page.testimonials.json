@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "page-title": {
+      "type": "page-title",
+      "blocks": {
+        "title": {
+          "type": "heading",
+          "settings": {
+            "title": "Our clients love us"
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "subtitle": "<p>Our store is designed to be user-friendly and easy to navigate, so customers can find what they're looking for quickly and easily<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "subtitle"
+      ],
+      "settings": {
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "form": {
+          "type": "form",
+          "settings": {
+            "field_photo": "optional",
+            "field_email": "required"
+          }
+        }
+      },
+      "block_order": [
+        "form"
+      ],
+      "settings": {
+        "page": "{{ page }}",
+        "show_all": true,
+        "color_scheme": "background-1-darker",
+        "show_photo": true,
+        "show_date": true,
+        "show_rating": true
+      }
+    },
+    "icons_bar": {
+      "type": "icons-bar",
+      "blocks": {
+        "icon-bar-1": {
+          "type": "icon",
+          "settings": {
+          }
+        },
+        "icon-bar-2": {
+          "type": "icon",
+          "settings": {
+          }
+        },
+        "icon-bar-3": {
+          "type": "icon",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "icon-bar-1",
+        "icon-bar-2",
+        "icon-bar-3"
+      ],
+      "settings": {
+        "border_top": false
+      }
+    }
+  },
+  "order": [
+    "page-title",
+    "testimonials",
+    "icons_bar"
+  ]
+}
