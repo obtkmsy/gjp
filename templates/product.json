@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "breadcrumbs": {
@@ -36,13 +45,6 @@
             "show_badges": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "is_collapsed": true,
-            "initial_lines": 3
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -70,18 +72,9 @@
           "settings": {
             "icons_width": 40,
             "icon_1": "relax-shipping",
-            "text_1": "<p>Free shipping anywhere<\/p>",
-            "icon_2": "relax-returns",
-            "text_2": "<p>30 day free returns<\/p>"
-          }
-        },
-        "collapsible_customer_service": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Customer Service",
-            "content": "<p>Post your customer service details here.<\/p>",
-            "page": "",
-            "icon": "none"
+            "text_1": "<p>Free shipping <\/p>",
+            "icon_2": "cash",
+            "text_2": "<p>Taxes included<\/p>"
           }
         },
         "collapsible_return_policy": {
@@ -93,17 +86,35 @@
             "icon": "none"
           }
         },
+        "collapsible_tab_Lyn4rw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About insurance",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "collapsible_customer_service": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Transportation lead time",
+            "content": "<p>Post your customer service details here.<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
         "share": {
           "type": "share",
-          "disabled": true,
           "settings": {
             "show_facebook": true,
             "show_twitter": true,
-            "show_pinterest": true
+            "show_pinterest": false
           }
         },
         "pickup": {
           "type": "pickup",
+          "disabled": true,
           "settings": {
           }
         }
@@ -112,13 +123,13 @@
         "title",
         "gallery",
         "price",
-        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "icons_bar",
-        "collapsible_customer_service",
         "collapsible_return_policy",
+        "collapsible_tab_Lyn4rw",
+        "collapsible_customer_service",
         "share",
         "pickup"
       ],
@@ -130,7 +141,6 @@
     },
     "fbt": {
       "type": "product-bought-together",
-      "disabled": true,
       "settings": {
         "border_bottom": true,
         "heading": "Frequently Bought Together",
@@ -143,63 +153,8 @@
         "image_ratio": "settings|product_card_image_ratio"
       }
     },
-    "product-tabs": {
-      "type": "product-tabs",
-      "blocks": {
-        "reviews": {
-          "type": "reviews",
-          "disabled": true,
-          "settings": {
-            "heading": "Reviews",
-            "app": "judgeme",
-            "enable_theme_appearance": true
-          }
-        },
-        "faq": {
-          "type": "faq",
-          "settings": {
-            "heading": "Frequently Asked Questions",
-            "default_faqs": "What level of performance can I expect from 4K Color Drive?:This tv comes equipped with a 4k color drive, which allows the tv to accurately reproduce a wider spectrum of colors. you’ll experience an exceptionally vibrant, pristine image that makes each scene more lifelike.",
-            "link_to_faq_page": ""
-          }
-        },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "heading": "Description"
-          }
-        },
-        "similar": {
-          "type": "similar",
-          "disabled": true,
-          "settings": {
-            "heading": "Similar Products",
-            "source": [
-
-            ],
-            "is_random": true,
-            "products_per_page": 4,
-            "badge_size": "sm",
-            "image_ratio": "settings|product_card_image_ratio",
-            "show_to_cart_button": false
-          }
-        }
-      },
-      "block_order": [
-        "reviews",
-        "faq",
-        "description",
-        "similar"
-      ],
-      "disabled": true,
-      "settings": {
-        "tabs_layout": "collapsed"
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "title": "Related products",
         "product": "{{ product }}",
@@ -212,20 +167,6 @@
         "badge_size": "sm",
         "image_ratio": "settings|product_card_image_ratio",
         "show_to_cart_button": true
-      }
-    },
-    "recent_posts": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Recent posts",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "tags_limit": 3,
-        "excerpt_limit": 16,
-        "show_link": true,
-        "show_comments": false
       }
     },
     "icons_bar": {
@@ -268,44 +209,13 @@
         "shadow": false,
         "separator": false
       }
-    },
-    "rich_text_ehf8Jt": {
-      "type": "rich-text",
-      "blocks": {
-        "text_4mGwEp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>商品情報<\/p>"
-          }
-        },
-        "button_cqbDhq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "cover_color": "#F66560"
-          }
-        }
-      },
-      "block_order": [
-        "text_4mGwEp",
-        "button_cqbDhq"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "decorate": false
-      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "fbt",
-    "product-tabs",
     "product-recommendations",
-    "recent_posts",
-    "icons_bar",
-    "rich_text_ehf8Jt"
+    "icons_bar"
   ]
 }
